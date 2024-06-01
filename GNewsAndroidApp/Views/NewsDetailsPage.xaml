@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GNewsAndroidApp.Views.NewsDetailsPage"
+             Title="NewsDetailsPage">
+    <VerticalStackLayout Spacing="20" HorizontalOptions="Center">
+        <Image x:Name="ArticleImage" HeightRequest="200" Aspect="Fill" />
+        <Label x:Name="ArticleTitle" Padding="5" />
+        <Label x:Name="ArticleContent" FontSize="Medium" />
+
+        <Label TextColor="Blue" TextDecorations="Underline" x:Name="ArticleUrl" Padding="10" Margin="10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+        
+        <Button x:Name="btnBack" Text="Back" WidthRequest="80" Clicked="btnBack_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
